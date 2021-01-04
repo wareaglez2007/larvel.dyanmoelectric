@@ -187,7 +187,7 @@ class PagesController extends Controller
         //before inserting we need to check and see if the page name is unique or not
         $validatedData = $request->validate([
             'title' => ['required', 'unique:pages', 'max:255'],
-            'description' => ['required'],
+            'content' => ['required'],
         ]);
         $count = $pages->get()->count();
         $pages->title = $request->title;

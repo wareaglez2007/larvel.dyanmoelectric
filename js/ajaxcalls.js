@@ -26,7 +26,7 @@ function PublishPage(id, pagenum, first, last) {
                 var url = '/admin/pages/drafts?page=' + pagenum;
 
                 $('#ajaxactioncalls').attr('style', 'display: visible;');
-                $('#ajaxactioncalls').html('<img src="/storage/ajax-loader.gif">' + response.success + "...");
+                $('#ajaxactioncalls').html('<img src="/storage/app/public/ajax-loader.gif">' + response.success + "...");
                 $('#activeid' + draftpage.id).fadeOut(700, function () {
                     $('#activeid' + draftpage.id).remove();
                     getPublished(url);
@@ -82,7 +82,7 @@ function UnPublishPage(id, pagenum, first, last) {
                 var url = '/admin/pages?page=' + pagenum;
 
                 $('#ajaxactioncalls').attr('style', 'display: visible;');
-                $('#ajaxactioncalls').html('<img src="/storage/ajax-loader.gif">' + response.success + "...");
+                $('#ajaxactioncalls').html('<img src="/storage/app/public/ajax-loader.gif">' + response.success + "...");
 
                 $('#activeid' + activepage.id).fadeOut(700, function () {
                     $('#activeid' + activepage.id).remove();
@@ -140,7 +140,7 @@ function DeleteAnyPage(id, parent, pagenum, first, last, type) {
                 var url = '/admin/pages' + type + '?page=' + pagenum;
                // console.log(url);
                $('#ajaxactioncalls').attr('style', 'display: visible;');
-               $('#ajaxactioncalls').html('<img src="/storage/ajax-loader.gif">' + response.success + "...");
+               $('#ajaxactioncalls').html('<img src="/storage/app/public/ajax-loader.gif">' + response.success + "...");
 
                 $('#activeid' + todelete.id).fadeOut(700, function () {
                     $('#activeid' + todelete.id).remove();
@@ -200,7 +200,7 @@ function PermDeletePage(id, parent, pagenum, first, last, position) {
 
                 //ajaxadangercalls
                 $('#ajaxadangercalls').attr('style', 'display: visible;');
-                $('#ajaxadangercalls').html('<img src="/storage/ajax-loader-red.gif">' + response.success);
+                $('#ajaxadangercalls').html('<img src="/storage/app/public/ajax-loader-red.gif">' + response.success);
 
                 $('#activeid' + todelete.id).fadeOut(700, function () {
                     $('#activeid' + todelete.id).remove();
@@ -255,7 +255,7 @@ function RestorePage(id, pagenum, first, last) {
                 }
                 var url = '/admin/pages/trashed?page=' + pagenum;
                 $('#ajaxactioncalls').attr('style', 'display: visible;');
-                $('#ajaxactioncalls').html('<img src="/storage/ajax-loader.gif">' + response.success + "...");
+                $('#ajaxactioncalls').html('<img src="/storage/app/public/ajax-loader.gif">' + response.success + "...");
 
                 $('#activeid' + torestore.id).fadeOut(700, function () {
                     $('#activeid' + torestore.id).remove();
@@ -354,7 +354,7 @@ function RestorePage(id, pagenum, first, last) {
             success: function(response) {
 
                 $('#ajaxactioncalls').attr('style', 'display: visible;');
-                $('#ajaxactioncalls').html('<img src="/storage/ajax-loader.gif">' + response.success +
+                $('#ajaxactioncalls').html('<img src="/storage/app/public/ajax-loader.gif">' + response.success +
                     "...");
 
                 var url = "/admin/pages";
@@ -404,7 +404,7 @@ function RestorePage(id, pagenum, first, last) {
             success: function(response) {
 
                 $('#ajaxactioncalls').attr('style', 'display: visible;');
-                $('#ajaxactioncalls').html('<img src="/storage/ajax-loader.gif">' + response.success +
+                $('#ajaxactioncalls').html('<img src="/storage/app/public/ajax-loader.gif">' + response.success +
                     "...");
 
                 var url = "/admin/pages/drafts";
